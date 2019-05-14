@@ -16,14 +16,18 @@ defmodule Arweave.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      applications: [:httpoison, :exjsx],
+      extra_applications: [:logger],
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:exjsx, "~> 4.0.0"},
+      {:httpoison, "~> 1.5.1"},
       {:excoveralls, "~> 0.10", only: :test},
+      {:meck, "~> 0.8.9", only: :test},
     ]
   end
 end
