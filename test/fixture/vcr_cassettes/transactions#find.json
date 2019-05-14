@@ -1,0 +1,20 @@
+[
+  {
+    "request": {
+      "body": "\"\"",
+      "headers": {
+        "User-agent": "elixir-arweave"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://arweave.net:1984/tx/0"
+    },
+    "response": {
+      "body": "{\r\n  \"id\": \"0\",\r\n  \"last_tx\": \"0\",\r\n  \"owner\": \"testowner\",\r\n  \"tags\": [],\r\n  \"target\": \"\",\r\n  \"quantity\": \"0\",\r\n  \"data\": \"testdata\",\r\n  \"reward\": \"100\",\r\n  \"signature\": \"testsignature\"\r\n}",
+      "headers": {},
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
