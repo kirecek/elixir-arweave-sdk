@@ -25,8 +25,9 @@ defmodule Arweave.MixProject do
   defp deps do
     [
       {:exjsx, "~> 4.0.0"},
-      {:httpoison, "~> 1.5.1"},
+      {:httpoison, "~> 1.3.0"},
       {:excoveralls, "~> 0.10", only: :test},
+      {:exvcr, "~> 0.10.3", only: :test},
       {:meck, "~> 0.8.9", only: :test},
     ]
   end

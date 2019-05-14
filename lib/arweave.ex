@@ -36,9 +36,9 @@ defmodule Arweave do
     _request(:post, url(client, path), body)
   end
 
-  @spec post(binary, Client.t(), any) :: response
+  @spec get(binary, Client.t(), any) :: response
   def get(path, client, body \\ "") do
-    _request(:post, url(client, path), body)
+    _request(:get, url(client, path), body)
   end
 
   @spec url(client :: Client.t(), path :: binary) :: binary
