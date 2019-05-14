@@ -1,6 +1,6 @@
-defmodule ElixirArweaveSdk do
+defmodule Arweave do
   @moduledoc """
-  Documentation for ElixirArweaveSdk.
+  Documentation for Arweave.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule ElixirArweaveSdk do
 
   ## Examples
 
-      iex> ElixirArweaveSdk.hello()
+      iex> Arweave.hello()
       :world
 
   """
