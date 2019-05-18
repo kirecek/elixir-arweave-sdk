@@ -14,4 +14,16 @@ defmodule Arweave.Transactions do
     get("tx/#{id}", client)
   end
 
+  @doc """
+  Get a single field from a transaction.
+  ## Example
+      Arweave.Transactions.get_field "BNttzDav3jHVnNiV7nYbQv-GY0HQ-4XXsdkE5K9ylHQ" "jUcuEDZQy2fC6T3fHnGfYsw0D0Zl4NfuaXfwBOLiQtA"
+      Arweave.Transactions.get_field client, "BNttzDav3jHVnNiV7nYbQv-GY0HQ-4XXsdkE5K9ylHQ" "jUcuEDZQy2fC6T3fHnGfYsw0D0Zl4NfuaXfwBOLiQtA"
+  More info at: https://docs.arweave.org/developers/server/http-api#transactions
+  """
+  @spec get_field(Client.t(), binary) :: Arweave.response()
+  def get_field(client \\ %Client{}, id, field) do
+    get("tx/#{id}/#{field}", client)
+  end
+
 end

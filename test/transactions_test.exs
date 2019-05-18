@@ -17,4 +17,11 @@ defmodule Arweave.TransactionsTest do
       assert id == "0"
     end
   end
+
+  test "get_field/3" do
+    use_cassette "transactions#get_field" do
+      {_, resp, _} = get_field(@client, "0", "0")
+      assert resp == 0
+    end
+  end
 end
