@@ -24,4 +24,11 @@ defmodule Arweave.TransactionsTest do
       assert resp == 0
     end
   end
+
+  test "get_data/3" do
+    use_cassette "transactions#get_data" do
+      {_, resp, _} = get_data(@client, "0", "html")
+      assert resp == "<html><\/html>"
+    end
+  end
 end

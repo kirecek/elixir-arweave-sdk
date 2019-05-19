@@ -1,0 +1,20 @@
+[
+  {
+    "request": {
+      "body": "\"\"",
+      "headers": {
+        "User-agent": "elixir-arweave"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://arweave.net:1984/tx/0/data.html"
+    },
+    "response": {
+      "body": "\"<html></html>\"",
+      "headers": {},
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

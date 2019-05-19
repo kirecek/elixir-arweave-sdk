@@ -21,9 +21,21 @@ defmodule Arweave.Transactions do
       Arweave.Transactions.get_field client, "BNttzDav3jHVnNiV7nYbQv-GY0HQ-4XXsdkE5K9ylHQ" "jUcuEDZQy2fC6T3fHnGfYsw0D0Zl4NfuaXfwBOLiQtA"
   More info at: https://docs.arweave.org/developers/server/http-api#transactions
   """
-  @spec get_field(Client.t(), binary) :: Arweave.response()
+  @spec get_field(Client.t(), binary, binary) :: Arweave.response()
   def get_field(client \\ %Client{}, id, field) do
     get("tx/#{id}/#{field}", client)
+  end
+
+  @doc """
+  Get the raw base64 decoded data from a transaction.
+  ## Example
+      Arweave.Transactions.get_data "BNttzDav3jHVnNiV7nYbQv-GY0HQ-4XXsdkE5K9ylHQ" "html"
+      Arweave.Transactions.get_data client, "BNttzDav3jHVnNiV7nYbQv-GY0HQ-4XXsdkE5K9ylHQ" "html"
+  More info at: https://docs.arweave.org/developers/server/http-api#transactions
+  """
+  @spec get_data(Client.t(), binary, binary) :: Arweave.response()
+  def get_data(client \\ %Client{}, id, extension) do
+    get("tx/#{id}/data.#{extension}", client)
   end
 
 end
