@@ -51,4 +51,26 @@ defmodule Arweave.Transactions do
   def get_price(client \\ %Client{}, bytes \\ "0") do
     get("tx/#{bytes}", client)
   end
+
+  @doc """
+  Submit a new transaction to the network.
+
+  Required values for `body`:
+
+  * [id: "The transaction ID"]
+  * [last_tx: "The last outgoing transaction ID from the sending wallet."]
+  * [owner: "The full RSA modulus value for the sending wallet, base64 URL encoded. The modulus is the n value from a JWK."]
+  * [tags: "List of tags to identify transaction"]
+  * [target: "The recipient address (if sending AR to another wallet). Use an empty string for data transactions."]
+  * [quantity: "The amount in winston to transfer to the target wallet. Use an empty string for data transactions."]
+  * [data: "The data to be uploaded, base64 URL encoded. Use an empty string if not required."]
+  * [reward: "The transaction fee."]
+  * [signature: "The transaction signature, base64 URL encoded."]
+
+  More info at: https://docs.arweave.org/developers/server/http-api#transactions
+  """
+  @spec create(Client.t(), map) :: Arweave.response()
+  def create(client \\ %Client{}, body) do
+    post("tx", client, body)
+  end
 end
