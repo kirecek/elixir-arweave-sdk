@@ -43,13 +43,8 @@ defmodule Arweave.Transactions do
   More info at: https://docs.arweave.org/developers/server/http-api#transactions
   """
   @spec get_price(Client.t(), binary, binary) :: Arweave.response()
-  def get_price(client \\ %Client{}, bytes, target) do
+  def get_price(client \\ %Client{}, bytes \\ "0", target \\ "") do
     get("tx/#{bytes}/#{target}", client)
-  end
-
-  @spec get_price(Client.t(), binary) :: Arweave.response()
-  def get_price(client \\ %Client{}, bytes \\ "0") do
-    get("tx/#{bytes}", client)
   end
 
   @doc """
