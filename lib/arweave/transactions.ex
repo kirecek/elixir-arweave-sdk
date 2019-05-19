@@ -38,4 +38,17 @@ defmodule Arweave.Transactions do
     get("tx/#{id}/data.#{extension}", client)
   end
 
+  @doc """
+  Calculate the minimum fee (reward) for a transaction of a specific size, and possibly to a specific address.
+  More info at: https://docs.arweave.org/developers/server/http-api#transactions
+  """
+  @spec get_price(Client.t(), binary, binary) :: Arweave.response()
+  def get_price(client \\ %Client{}, bytes, target) do
+    get("tx/#{bytes}/#{target}", client)
+  end
+
+  @spec get_price(Client.t(), binary) :: Arweave.response()
+  def get_price(client \\ %Client{}, bytes \\ "0") do
+    get("tx/#{bytes}", client)
+  end
 end
