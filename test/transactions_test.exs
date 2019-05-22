@@ -31,4 +31,19 @@ defmodule Arweave.TransactionsTest do
       assert resp == "<html><\/html>"
     end
   end
+
+  test "get_price/3" do
+    use_cassette "transactions#get_price" do
+      {_, resp, _} = get_price(@client, "0", "0")
+      assert resp == 0
+    end
+  end
+
+  test "create/2" do
+    use_cassette "transactions#create" do
+      {_, resp, _} = create(@client, %{})
+      assert resp == "OK"
+    end
+  end
+
 end
