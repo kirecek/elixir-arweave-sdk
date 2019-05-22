@@ -1,0 +1,20 @@
+[
+  {
+    "request": {
+      "body": "\"\"",
+      "headers": {
+        "User-agent": "elixir-arweave"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://arweave.net:1984/block/hash/AAAAABXiIEay0l1jH9ibJWKNvCUlxVQrQiZGVyW-4MuDX6Pn_uq6-oOGk3kwAxRa"
+    },
+    "response": {
+      "body": "{\"nonce\":\"AQEBAAEBAQAAAAAAAQABAAABAAEAAAEBAAAAAQEBAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\"previous_block\":\"5M2ADEdNw0m5FnF62eBfFJ82lrizaAbb-gI6h3SNCOcV8JP5S7QQzy7_qf9ZxJsQ\",\"timestamp\":1541689556,\"last_retarget\":1541688945,\"diff\":34,\"height\":78419,\"hash\":\"AAAAABXiIEay0l1jH9ibJWKNvCUlxVQrQiZGVyW-4MuDX6Pn_uq6-oOGk3kwAxRa\",\"indep_hash\":\"fv5jRd2TDURBIJAS0BJCtqY3eXpoXvLu7XE6zFU2sgiKFDZc3D6qChS5V99SRuH0\",\"txs\":[],\"wallet_list\":\"XYkvWyf0HG2OE1c1_61S6JYew13cKafmshIQ5MGmcAk\",\"reward_addr\":\"G5m6plnC8pKBQFDZOjZvCscbGL216zE_bCexAzM-7UI\",\"tags\":[],\"reward_pool\":3232,\"weave_size\":160604943,\"block_size\":0}",
+      "headers": {},
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
